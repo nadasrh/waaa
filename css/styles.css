@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100h;
+  background-image: url('../images/background-home-desktop.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+header {
+  width: inherit;
+  height: 12vh;
+
+  position: relative;
+  margin-top: 2rem;
+}
+
+header img {
+  display: inline-block;
+  margin-top: 1.45rem;
+  margin-left: 3rem;
+}
+header .ligne {
+  position: absolute;
+  width: 35rem;
+  height: 1px;
+  backdrop-filter: blur(20px);
+  left: 10rem;
+  top: 2.8rem;
+  z-index: 2;
+  background-color: rgba(128, 128, 128, 0.307);
+  /*filter: brightness(250%);
+  -webkit-filter: brightness(250%);*/
+}
+.mynav {
+  width: 55%;
+  height: inherit;
+  float: right;
+  backdrop-filter: blur(20px);
+  filter: brightness(120%);
+  -webkit-filter: brightness(120%);
+}
+.mynav .navbar {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin-inline: auto;
+}
+.navbar li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+  justify-content: center;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+}
+.navbar li a {
+  text-decoration: none;
+}
+.navbar li:hover {
+  background-color: rgba(128, 128, 128, 0.319);
+}
+.mysection {
+  width: 98vw;
+  margin-top: 13rem;
+  position: relative;
+}
+.mysection .descrip {
+  width: 30%;
+  margin-left: 9rem;
+}
+.descrip p:first-child {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.descrip span {
+  font-size: 9rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.explore {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.9rem;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: absolute;
+  right: 10rem;
+  bottom: 10px;
+}
+.explore p {
+  color: black;
+  width: 250px;
+  height: 30%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.descrip p:last-child {
+  line-height: 2rem;
+  margin-top: 1.6rem;
+  font-size: 1rem;
+  width: 440px;
+}
+.active {
+  border-bottom: 3px solid white;
+}
+
+.navbar li:hover:not(.active) {
+  border-bottom: 2px solid yellow;
+}
+.explore::after {
+  content: "let'sgo";
+  position: absolute;
+  width: 10rem;
+  height: 7rem;
+  color: black;
+  top: 50px;
+  transform: translatey(-190%);
+  -webkit-transform: translatey(-190%);
+  -moz-transform: translatey(-190%);
+  -ms-transform: translatey(-190%);
+  -o-transform: translatey(-190%);
+  opacity: 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 60%;
+  -webkit-border-radius: 60%;
+  -moz-border-radius: 60%;
+  -ms-border-radius: 60%;
+  -o-border-radius: 60%;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+}
+.explore::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 15px;
+  background-color: white;
+  top: 50px;
+  z-index: 2;
+  transform: translateY(-743%) translateX(-10%) rotate(215deg);
+  -webkit-transform: translateY(-743%) translateX(-10%) rotate(215deg);
+  -moz-transform: translateY(-743%) translateX(-10%) rotate(215deg);
+  -ms-transform: translateY(-743%) translateX(-10%) rotate(215deg);
+  opacity: 0;
+  -o-transform: translateY(-743%) translateX(-10%) rotate(215deg);
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+}
+.explore:hover::after,
+.explore:hover::before {
+  opacity: 1;
+  top: 0;
+}
